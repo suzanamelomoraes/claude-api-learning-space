@@ -1,14 +1,17 @@
 [
   {
-    "task": "Create a JSON configuration object for an AWS Lambda function that processes S3 bucket events with a 30-second timeout and 256MB memory allocation",
-    "format": "json"
+    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs that have a type of 'AWS::Lambda::Function'",
+    "format": "python",
+    "solution_criteria": "Function should accept a CloudFormation template (dict or JSON string), iterate through Resources section, filter by Lambda function type, and return a list of logical IDs. Should handle missing Resources key gracefully."
   },
   {
-    "task": "Write a Python function that extracts the AWS account ID and region from an ARN string",
-    "format": "python"
+    "task": "Create a JSON policy document that allows an IAM user to perform read-only operations (GetObject, ListBucket) on a specific S3 bucket named 'my-data-bucket'",
+    "format": "json",
+    "solution_criteria": "Valid JSON policy with proper Statement array, Effect set to Allow, correct S3 action names, appropriate Resource ARNs for the bucket and its objects, and Principal element if needed for a resource-based policy."
   },
   {
-    "task": "Create a regex pattern that validates AWS S3 bucket names (must be 3-63 characters, lowercase letters, numbers, hyphens, and cannot start/end with hyphens)",
-    "format": "regex"
+    "task": "Create a regex pattern to validate AWS S3 bucket names according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens, must start and end with letter or number)",
+    "format": "regex",
+    "solution_criteria": "Regex should match valid S3 bucket names (e.g., 'my-bucket-123', 'data-lake') and reject invalid names (e.g., '-invalid', 'UPPERCASE', 'a', 'toolongnamewithmorethan63charactersincludingnumbersandletters1234')."
   }
 ]
