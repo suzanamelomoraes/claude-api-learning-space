@@ -1,17 +1,17 @@
 [
   {
-    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs that have a type of 'AWS::Lambda::Function'",
+    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs that are of type 'AWS::S3::Bucket'",
     "format": "python",
-    "solution_criteria": "Function should accept a CloudFormation template (dict or JSON string), iterate through Resources section, filter by Lambda function type, and return a list of logical IDs. Should handle missing Resources key gracefully."
+    "solution_criteria": "Function should accept a CloudFormation template (dict or JSON string), return a list of logical IDs for S3 buckets, handle nested resources, and work with templates of varying complexity"
   },
   {
-    "task": "Create a JSON policy document that allows an IAM user to perform read-only operations (GetObject, ListBucket) on a specific S3 bucket named 'my-data-bucket'",
+    "task": "Create a JSON policy document that allows an IAM user to perform only GetObject and PutObject actions on a specific S3 bucket named 'my-app-bucket'",
     "format": "json",
-    "solution_criteria": "Valid JSON policy with proper Statement array, Effect set to Allow, correct S3 action names, appropriate Resource ARNs for the bucket and its objects, and Principal element if needed for a resource-based policy."
+    "solution_criteria": "Valid IAM policy JSON with correct statement structure, specifies only GetObject and PutObject actions, targets the correct S3 bucket ARN and objects within it, follows AWS policy formatting standards"
   },
   {
-    "task": "Create a regex pattern to validate AWS S3 bucket names according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens, must start and end with letter or number)",
+    "task": "Extract all AWS resource ARNs from an unstructured log file using a regex pattern that matches the standard ARN format",
     "format": "regex",
-    "solution_criteria": "Regex should match valid S3 bucket names (e.g., 'my-bucket-123', 'data-lake') and reject invalid names (e.g., '-invalid', 'UPPERCASE', 'a', 'toolongnamewithmorethan63charactersincludingnumbersandletters1234')."
+    "solution_criteria": "Regex pattern should match valid AWS ARN format (arn:aws:service:region:account-id:resource), correctly capture ARNs with various resource types (S3, EC2, Lambda, RDS, etc.), avoid false positives, and work with ARNs containing colons and hyphens"
   }
 ]
