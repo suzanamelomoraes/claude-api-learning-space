@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "72",
+      "goal": "Build muscle and improve endurance for competitive cycling",
+      "restrictions": "Vegan (no animal products)"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals and includes adequate protein (minimum 1.6g per kg body weight) from plant-based sources",
+      "All meals align with vegan dietary restrictions with no animal products",
+      "Plan includes micronutrient-dense foods addressing vegan athlete needs (iron, B12, calcium, omega-3)",
+      "Meals are practical and compact, suitable for a single day without excessive preparation time"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an athlete with dietary restrictions (vegan/vegetarian) requiring the meal plan to meet both performance needs and ethical food choices while maintaining adequate micronutrients"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "85 kg",
+      "goal": "Muscle recovery and strength gains from weightlifting training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains exactly 4-5 meals with balanced protein distribution (25-35g per meal)",
+      "Includes specific pre-workout and post-workout nutrition timing and composition",
+      "Total daily calories and macronutrients are appropriate for a strength athlete at this weight",
+      "Plan is presented in compact, easy-to-follow format suitable for a single day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) emphasizing protein distribution across meals and pre/post-workout nutrition for muscle recovery"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "70 kg",
+      "goal": "Prepare for a marathon with a 20km long run training session scheduled for afternoon",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan is compact and covers exactly one full day",
+      "Includes high carbohydrate intake appropriate for endurance athlete (55-65% of calories)",
+      "Provides pre-workout meal/snacks timed 2-3 hours before afternoon long run and post-workout nutrition within 30-60 minutes after",
+      "Total daily caloric intake aligns with marathon training demands (approximately 2800-3200 calories)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a professional endurance athlete (marathon runner) requiring high carbohydrate intake and specific timing around long training sessions"
+  }
+]
